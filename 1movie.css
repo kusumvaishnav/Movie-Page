@@ -1,0 +1,239 @@
+
+
+
+
+/* General Styles */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #141414; /* Dark background color similar to Netflix */
+    color: #e5e5e5; /* Light text color */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #fff; /* White color for the header */
+    margin-top: 20px;
+    font-size: 3rem; /* Increase font size for the header */
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #555; /* Darker border */
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #000; /* Text color inside input */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #e50914; /* Netflix red */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #b81d24; /* Darker red on hover */
+}
+
+/* Movie Cards */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-card {
+    background-color: #333; /* Dark background for movie cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.movie-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff; /* White text color */
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Movie Player */
+.movie-player {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.movie-player.hidden {
+    display: none;
+}
+
+#player {
+    width: 80%;
+    max-width: 800px;
+    background-color: #000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.back-player {
+    background-color: #e50914; /* Netflix red */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.back-player:hover {
+    background-color: #b81d24; /* Darker red on hover */
+}
+
+/* Watch List Section */
+.watchlist-container {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    background-color: #333; /* Dark background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.watchlist-container h2 {
+    color: #fff; /* White text color */
+    margin-bottom: 20px;
+}
+
+.watchlist-movie-card {
+    display: inline-block;
+    margin: 10px;
+    width: 150px;
+    padding: 10px;
+    background-color: #444; /* Slightly lighter dark background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.watchlist-movie-card:hover {
+    transform: translateY(-10px);
+}
+
+.watchlist-movie-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.watchlist-movie-card button {
+    padding: 5px 10px;
+    background-color: #e50914; /* Netflix red */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.watchlist-movie-card button:hover {
+    background-color: #b81d24; /* Darker red on hover */
+}
+
+/* General styles for the movie details container */
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #e5e5e5; /* Light text color */
+    background-color: #333; /* Dark background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Styles for the movie poster image */
+.movie-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Button styles */
+.movie-details button {
+    background-color: #e50914; /* Netflix red */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.movie-details button:hover {
+    background-color: #b81d24; /* Darker red on hover */
+}
+
+/* Close details button styles */
+.close-details {
+    background-color: #e50914; /* Netflix red */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.close-details:hover {
+    background-color: #b81d24; /* Darker red on hover */
+}
